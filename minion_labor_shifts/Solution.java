@@ -16,29 +16,25 @@ class Answer {
                 }
             }
             if(count<=n){
-                if(newList.contains(data[i])){
-                    continue;
-                } else {
-                    newList.add(data[i]);
-                }
+                newList.add(data[i]);
             }
         }
-          Integer[] intList = new Integer[newList.size()];
-    int[] javaSucksList = new int[newList.size()];
+    Integer[] intList = new Integer[newList.size()];
+    int[] javaList = new int[newList.size()];
     
-    for(int ughjavaIndex = 0; ughjavaIndex < newList.size(); ughjavaIndex++){
-        javaSucksList[ughjavaIndex] = newList.get(ughjavaIndex);
+    for(int k = 0; k < newList.size(); k++){
+        javaList[k] = newList.get(k);
     }
     
-    return javaSucksList;
+    return javaList;
     } 
     
     public static void main (String[] args) throws java.lang.Exception
     {
         //int[] list = {1,2,3};
-        int[] list = {5,10,15,10,7};
-        //int[] list = {1,2,2,4,4,4,6,7};
-        int n = 1;
+        //int[] list = {5,10,15,10,7};
+        int[] list = {1,3,4,4,4,5,5,6};
+        int n = 2;
         int[] newList = answer(list, n);
 
 
