@@ -1,3 +1,7 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
 class Answer {   
     public static int[] answer(int[] data, int n) { 
         if(n == 0){
@@ -13,16 +17,13 @@ class Answer {
             }
             if(count<=n){
                 if(newList.contains(data[i])){
-                    break;
+                    continue;
                 } else {
                     newList.add(data[i]);
                 }
             }
         }
           Integer[] intList = new Integer[newList.size()];
-    
-    //Gotta convert Integer[] to int[], because Java.
-    
     int[] javaSucksList = new int[newList.size()];
     
     for(int ughjavaIndex = 0; ughjavaIndex < newList.size(); ughjavaIndex++){
@@ -34,10 +35,10 @@ class Answer {
     
     public static void main (String[] args) throws java.lang.Exception
     {
-        //int[] list = {1,2,2,3,3,3,4,5,5};
-        //int[] list = {5,10,15,10,7};
-        int[] list = {1,2,2,4,4,4,6,7};
-        int n = 2;
+        //int[] list = {1,2,3};
+        int[] list = {5,10,15,10,7};
+        //int[] list = {1,2,2,4,4,4,6,7};
+        int n = 1;
         int[] newList = answer(list, n);
 
 
